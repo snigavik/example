@@ -105,8 +105,6 @@ var Box = (function () {
         }();
 
         this._blobs = [];
-
-        this._isOver = false;
         prevTime = new Date().getTime();
     };
 
@@ -187,20 +185,28 @@ $window.load(function () {
         canvasPosition = $canvas.offset(),
         pixelRatio = window.devicePixelRatio || 1;
 
-    canvas.width = canvasWidth * pixelRatio;
-    canvas.height = canvasHeight * pixelRatio;
+    canvas.width = canvasWidth - 100 * pixelRatio;
+    canvas.height = canvasHeight - 100 * pixelRatio;
 
-    $canvas.css({ width: canvasWidth, height: canvasHeight });
+    $canvas.css({ width: canvasWidth - 100, height: canvasHeight - 100 });
 
     var ctx = canvas.getContext('2d');
     ctx.scale(pixelRatio, pixelRatio);
 
     var box = new Box(ctx, canvasWidth, canvasHeight);
+
     box.init();
     box.start();
 
     $canvas.on('click', function (e) {
         box.handleClick(toVector2d(e, canvasPosition));
     });
+
+    $('#capture').on('click', function(e) {
+        ctx.globalCompositeOperation = "destination-over";
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        window.open(document.getElementById('pole').toDataURL(), '');
+    })
 
 });

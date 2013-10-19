@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2718327" vertical-offset="0" max-vertical-offset="813">
+            <state line="19" column="7" selection-start="471" selection-end="471" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -42,16 +42,16 @@
       <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="3604">
+            <state line="194" column="0" selection-start="4911" selection-end="4911" vertical-scroll-proportion="-16.24" vertical-offset="2892" max-vertical-offset="3706">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vector2d.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="vector2d.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/vector2d.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="952">
+            <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.8784267" vertical-offset="113" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/js/vector2d.js" />
-        <option value="$PROJECT_DIR$/js/game.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/game.js" />
       </list>
     </option>
   </component>
@@ -270,23 +270,23 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/vector2d.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="952">
+        <state line="19" column="7" selection-start="471" selection-end="471" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="3604">
+        <state line="194" column="0" selection-start="4911" selection-end="4911" vertical-scroll-proportion="-16.24" vertical-offset="2892" max-vertical-offset="3706">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/vector2d.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2718327" vertical-offset="0" max-vertical-offset="813">
+        <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.8784267" vertical-offset="113" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
