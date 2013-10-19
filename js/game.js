@@ -3,9 +3,7 @@ var $window = $(window),
     canvasHeight = $window.height() - 4,
     FPS = 4 * 12;
 
-var now, prevTime, delta;
-   
-
+var now, prevTime;
 var colors = {
         "red": "#ff0000",
         "yellow": "#ffff00",
@@ -78,22 +76,22 @@ var Blob = (function () {
         this._color = color;
     }
 
-    Blob.prototype.getPosition = function(){
+    Blob.prototype.getPosition = function () {
         return this._position;
     };
 
-    Blob.prototype.getRadius = function(){
+    Blob.prototype.getRadius = function () {
         return this._radius;
-    }
+    };
 
     Blob.prototype.move = function (dt) {
-        this._position.add_vector2(this._velocity.mul(dt/1000));
+        this._position.add_vector2(this._velocity.mul(dt / 1000));
 
     };
 
-    Blob.prototype.setVelocity = function(v){
+    Blob.prototype.setVelocity = function (v) {
         this._velocity = v;
-    }
+    };
 
     Blob.prototype.draw = function (ctx) {
         ctx.fillStyle = this._color;
@@ -108,26 +106,26 @@ var Blob = (function () {
 })();
 
 var utils = {
-    genSign : function(){
-        if(Math.random()>0.5) return 1; else return -1;
+    genSign: function () {
+        if (Math.random() > 0.5) return 1; else return -1;
     },
-    genVelo : function(){
-        var x = utils.genSign()*(1 + Math.random()*10);
-        var y = utils.genSign()*(1 + Math.random()*10);
-        return new Vector2d(x,y);
-    },
-
-    genPos : function(){
-        var x = 100 + Math.random()*400;
-        var y = 100 + Math.random()*400;
-        return new Vector2d(x,y);
+    genVelo: function () {
+        var x = utils.genSign() * (1 + Math.random() * 10);
+        var y = utils.genSign() * (1 + Math.random() * 10);
+        return new Vector2d(x, y);
     },
 
-    sign : function (n) {
+    genPos: function () {
+        var x = 100 + Math.random() * 400;
+        var y = 100 + Math.random() * 400;
+        return new Vector2d(x, y);
+    },
+
+    sign: function (n) {
         return n ? (n < 0 ? -1 : 1) : 0;
     },
 
-    distance : function (p, p0, p1) {
+    distance: function (p, p0, p1) {
         var v = p1.add_vector(p0.mul(-1));
         var w = p.add_vector(p0.mul(-1));
         var c1 = w.mul_scalar(v);
@@ -142,24 +140,20 @@ var utils = {
 
 
 var Box = (function () {
-    function Box(ctx, width, height) {
+    function Box(ctx) {
         this._ctx = ctx;
-        this._width = width;
-        this._height = height;
-        this._prev;
-        this._flagDown = false;
         this.init();
     }
 
     Box.prototype.init = function () {
-        window.requestAnimationFrame = function() {
+        window.requestAnimationFrame = function () {
             return window.requestAnimationFrame ||
                 window.webkitRequestAnimationFrame ||
                 window.mozRequestAnimationFrame ||
                 window.msRequestAnimationFrame ||
                 window.oRequestAnimationFrame ||
-                function(f) {
-                    window.setTimeout(f,1000/FPS);
+                function (f) {
+                    window.setTimeout(f, 1000 / FPS);
                 }
         }();
 
@@ -169,31 +163,18 @@ var Box = (function () {
         prevTime = new Date().getTime();
     };
 
-    Box.prototype.handleClick = function(p){
+    Box.prototype.handleClick = function (p) {
         this.addBlob(p);
     };
 
-    Box.prototype.handleDown = function(p){
+    Box.prototype.addBlob = function (pos) {
 
-    };
-
-    Box.prototype.handleMove = function(p){
-
-
-    };
-
-    Box.prototype.handleUp = function(){
-       
-    };        
-
-    Box.prototype.addBlob = function(pos){
-        
         var rnd = Math.floor(Math.random() * (colors_names.length));
         var color = colors[colors_names[rnd]];
 
         var vel = utils.genVelo();
-        var r = 16 + Math.random()*32;
-        var b = new Blob(pos,r,vel,color);
+        var r = 16 + Math.random() * 32;
+        var b = new Blob(pos, r, vel, color);
         this._blobs.push(b);
     };
 
@@ -202,10 +183,6 @@ var Box = (function () {
         this._paused = false;
         this._gameLoop();
 
-    };
-
-    Box.prototype.pause = function () {
-        this._paused = true;
     };
 
     Box.prototype._gameLoop = function () {
@@ -220,8 +197,7 @@ var Box = (function () {
         //вычисление FPS
         now = new Date().getTime();
         dt = now - prevTime;
-        FPS = 1000/dt;
-
+        FPS = 1000 / dt;
 
 
         function blobIsOut(b) {
@@ -253,30 +229,9 @@ var Box = (function () {
         this._ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     };
 
-    Box.prototype.isOver = function () {
-        return this._isOver;
-    };
 
     return Box;
 })();
-
-var start = true, down = false, tn = 0;
-
-function handleClick(p){
-
-}
-
-function handleMove(p){
-    
-}
-
-function handleDown(p){
-        
-}
-
-function handleUp(p){
-    
-}
 
 // Application start.
 $window.load(function () {
@@ -288,7 +243,7 @@ $window.load(function () {
     canvas.width = canvasWidth * pixelRatio;
     canvas.height = canvasHeight * pixelRatio;
 
-    $canvas.css({ width : canvasWidth, height : canvasHeight });
+    $canvas.css({ width: canvasWidth, height: canvasHeight });
 
     var ctx = canvas.getContext('2d');
     ctx.scale(pixelRatio, pixelRatio);
@@ -297,16 +252,8 @@ $window.load(function () {
     box.init();
     box.start();
 
-   $(document)
-        .on('mousedown', function (e) {
-            box.handleDown(toVector2d(e, canvasPosition));
-        })
-        .on('mousemove', function (e) {
-            box.handleMove(toVector2d(e, canvasPosition));
-        })
-        .on('mouseup', box.handleUp)
-        .on('click', function (e) {
-            box.handleClick(toVector2d(e, canvasPosition));
-        });
+    $canvas.on('click', function (e) {
+        box.handleClick(toVector2d(e, canvasPosition));
+    });
 
 });
