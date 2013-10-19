@@ -30,19 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
+            <state line="13" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2718327" vertical-offset="0" max-vertical-offset="813">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="0" selection-start="5182" selection-end="5182" vertical-scroll-proportion="2.2967818" vertical-offset="1473" max-vertical-offset="4505">
+            <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="3604">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vector2d.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vector2d.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -67,8 +76,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/vector2d.js" />
         <option value="$PROJECT_DIR$/js/game.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -260,16 +270,23 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/vector2d.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
+        <state line="50" column="1" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="0" selection-start="5182" selection-end="5182" vertical-scroll-proportion="2.2967818" vertical-offset="1473" max-vertical-offset="4505">
+        <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="3604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2718327" vertical-offset="0" max-vertical-offset="813">
           <folding />
         </state>
       </provider>
