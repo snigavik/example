@@ -185,8 +185,8 @@ $window.load(function () {
         canvasPosition = $canvas.offset(),
         pixelRatio = window.devicePixelRatio || 1;
 
-    canvas.width = canvasWidth - 100 * pixelRatio;
-    canvas.height = canvasHeight - 100 * pixelRatio;
+    canvas.width = (canvasWidth - 100) * pixelRatio;
+    canvas.height = (canvasHeight - 100) * pixelRatio;
 
     $canvas.css({ width: canvasWidth - 100, height: canvasHeight - 100 });
 
